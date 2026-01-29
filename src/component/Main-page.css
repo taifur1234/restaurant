@@ -18,7 +18,7 @@
   background-repeat: no-repeat;
 
   padding: 10px 20px;
-  height: 585px;
+  height:650px;
 }
 .nav-list {
   position: fixed;
@@ -137,6 +137,41 @@
 
 @media screen and (min-width:320px) and (max-width: 480px) {
 
+
+  .sec-glass {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1100;
+  transition: all 0.5s ease;
+}
+.navbar{
+  padding-left: 0;
+}
+
+.sec-glass.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+.sec-glass.glass .logo-p {
+  color: black;
+}
+
+.sec-glass.glass .hamburger span {
+  background: black;
+}
+
+
   .hamburger {
     display: block;
   }
@@ -148,8 +183,8 @@
 .logo-p{
   font-size: 22px;
   font-weight: bold;
-  margin-right: auto;
-  margin-top: 12px;
+  margin: 12px 0px 0px 20px;
+  position: fixed;
 }
   .logo{
     list-style: none;
@@ -193,7 +228,7 @@
   }
 
   .hero-details {
-    margin: 130px 15px 0;
+    margin: 200px 15px 0px 20px;
   }
 
   .hero-details h1 {
@@ -226,6 +261,39 @@
 
 @media screen and (min-width:481px) and (max-width: 600px) {
 
+   .sec-glass {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1100;
+  transition: all 0.5s ease;
+}
+.navbar{
+  padding-left: 0;
+}
+
+.sec-glass.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+.sec-glass.glass .logo-p {
+  color: black;
+}
+
+.sec-glass.glass .hamburger span {
+  background: black;
+}
+
   .hamburger {
     display: block;
   }
@@ -236,8 +304,8 @@
 .logo-p{
   font-size: 22px;
   font-weight: bold;
-  margin-right: auto;
-  margin-top: 12px;
+  margin: 12px 0px 0px 20px;
+  position: fixed;
 }
 
   .logo{
@@ -282,7 +350,7 @@
   }
 
   .hero-details {
-    margin: 130px 15px 0;
+    margin: 200px 15px 0px 20px;
   }
 
   .hero-details h1 {
@@ -313,6 +381,40 @@
 
 @media screen and (min-width:601px) and (max-width: 768px) {
 
+
+    .sec-glass {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1100;
+  transition: all 0.5s ease;
+}
+.navbar{
+  padding-left: 0;
+}
+
+.sec-glass.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+.sec-glass.glass .logo-p {
+  color: black;
+}
+
+.sec-glass.glass .hamburger span {
+  background: black;
+}
+
   .hamburger {
     display: block;
   }
@@ -324,8 +426,8 @@
 .logo-p{
   font-size: 22px;
   font-weight: bold;
-  margin-right: auto;
-  margin-top: 12px;
+   margin: 12px 0px 0px 20px;
+  position: fixed;
 }
 
   .logo{
@@ -370,7 +472,7 @@
   }
 
   .hero-details {
-    margin: 130px 15px 0;
+    margin: 180px 15px 0px 20px;
   }
 
   .hero-details h1 {
@@ -443,6 +545,7 @@
 
   .hero-details p {
     font-size: 1.5rem;
+    width: 70%;
     line-height: 1.4;
     padding-top: 10px;
     text-align: justify;
@@ -497,6 +600,7 @@
     font-size: 1.5rem;
     line-height: 1.4;
     padding-top: 10px;
+    width: 70%;
     text-align: justify;
   }
 

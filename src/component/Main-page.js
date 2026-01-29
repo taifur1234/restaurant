@@ -19,11 +19,88 @@ export default function Main_page() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+
+
+  useEffect(() => {
+  const handleScroll = () => {
+    const secGlass = document.querySelector(".sec-glass");
+    const width = window.innerWidth;
+
+    if (width >= 320 && width <= 480) {
+      if (window.scrollY > 50) {
+        secGlass.classList.add("glass");
+      } else {
+        secGlass.classList.remove("glass");
+      }
+    } else {
+      secGlass.classList.remove("glass");
+    }
+
+
+     if (width >= 481 && width <= 600) {
+      if (window.scrollY > 50) {
+        secGlass.classList.add("glass");
+      } else {
+        secGlass.classList.remove("glass");
+      }
+    } else {
+      secGlass.classList.remove("glass");
+    }
+
+
+    if (width >= 601 && width <= 768) {
+      if (window.scrollY > 50) {
+        secGlass.classList.add("glass");
+      } else {
+        secGlass.classList.remove("glass");
+      }
+    } else {
+      secGlass.classList.remove("glass");
+    }
+  };
+
+
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    window.removeEventListener("resize", handleScroll);
+  };
+}, []);
+
+
+useEffect(() => {
+  const secGlass = document.querySelector(".sec-glass");
+
+
+  if (menuOpen && window.scrollY > 50) {
+    secGlass.classList.remove("glass");
+  } else if (!menuOpen && window.scrollY > 50){
+    secGlass.classList.add("glass");
+    
+  }
+}, [menuOpen]);
+
+
+
   return (
     <div className="main-page-container">
       <nav className="navbar">
-        <p className="logo-p"> Flavour Hub</p>
         {/* NAVBAR */}
+        <div className="sec-glass">
+        <p className="logo-p"> Flavour Hub</p>
+        {/* HAMBURGER */}
+        <div
+          className={`hamburger ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+          </div>
         <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
           <li className="logo">Flavour Hub</li>
           <li className="nav-item">Home</li>
@@ -35,16 +112,6 @@ export default function Main_page() {
             <button className="book-btn">Book a Table</button>
           </li>
         </ul>
-
-        {/* HAMBURGER */}
-        <div
-          className={`hamburger ${menuOpen ? "active" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
 
         {/* HERO */}
         <div className="hero-details">
