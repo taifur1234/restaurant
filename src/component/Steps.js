@@ -14,7 +14,7 @@ export default function Steps() {
         {/* Step 1 */}
         <div className='step-card'>
           <div className='step-icon'>1</div>
-          <img className='step-one-img' src='step-1-img.png'/>
+          <img className='step-one-img' src='step-1-img.png' alt=''/>
           <h2>Choose Date & Time</h2>
           <p>Select the date and time that <br/> suits you best for your visit.</p>
         </div>
@@ -22,7 +22,7 @@ export default function Steps() {
         {/* Step 2 */}
         <div className='step-card'>
           <div className='step-icon'>2</div>
-          <img className='step-one-img' src='step-2-img.jpg'/>
+          <img className='step-one-img' src='step-2-img.jpg' alt=''/>
           <h2>Select Your Table</h2>
           <p>Pick a table from our available <br/> options to reserve your spot.</p>
         </div>
@@ -30,7 +30,7 @@ export default function Steps() {
         {/* Step 3 */}
         <div className='step-card'>
           <div className='step-icon'>3</div>
-          <img className='step-one-img' src='step-3-imgg.jfif'/>
+          <img className='step-one-img' src='step-3-imgg.jfif' alt=''/>
           <h2>Confirm Booking</h2>
           <p>Review your details and confirm <br/> your table booking instantly.</p>
         </div>
