@@ -1,0 +1,127 @@
+.cta-section {
+  position: relative;
+  padding: 120px 20px;
+  background: url("/public/biryani.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.cta-content {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  z-index: 2;
+}
+
+.cta-content h2 {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 17px;
+  margin: 18px auto 35px;
+  color: #eee;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+
+.cta-stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.cta-stats h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffb703;
+}
+
+.cta-stats span {
+  font-size: 14px;
+  color: #ddd;
+}
+
+
+.cta-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  font-size: 15px;
+  color: #f1f1f1;
+}
+
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.cta-primary {
+  background: #E55F60;
+  color: white;
+  border: none;
+  padding: 14px 38px;
+  font-size: 15px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-primary:hover {
+  background: #C02B35;
+  transform: scale(1.06);
+}
+
+.cta-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 14px 38px;
+  font-size: 15px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-secondary:hover {
+  background: white;
+  color: #000;
+}
+
+
+@media screen and (min-width:320px) and (max-width:480px) {
+  
+  .cta-content h2{
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width:481px) and (max-width:600px) {
+  
+   .cta-content h2{
+    font-size: 1.5rem;
+  }
+}
+
+
+@media screen and (min-width:601px) and (max-width:768px) {
+  
+   .cta-content h2{
+    font-size: 1.7rem;
+  }
+}
