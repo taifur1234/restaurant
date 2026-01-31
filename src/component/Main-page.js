@@ -22,35 +22,15 @@ export default function Main_page() {
 
 
 
-  useEffect(() => {
+useEffect(() => {
   const handleScroll = () => {
     const secGlass = document.querySelector(".sec-glass");
     const width = window.innerWidth;
 
-    if (width >= 320 && width <= 480) {
-      if (window.scrollY > 50) {
-        secGlass.classList.add("glass");
-      } else {
-        secGlass.classList.remove("glass");
-      }
-    } else {
-      secGlass.classList.remove("glass");
-    }
-
-
-     if (width >= 481 && width <= 600) {
-      if (window.scrollY > 50) {
-        secGlass.classList.add("glass");
-      } else {
-        secGlass.classList.remove("glass");
-      }
-    } else {
-      secGlass.classList.remove("glass");
-    }
-
-
-    if (width >= 601 && width <= 768) {
-      if (window.scrollY > 50) {
+    if (!secGlass) return;
+    
+    if (width >= 320 && width <= 768) {
+      if (window.scrollY > 50 && !menuOpen) {
         secGlass.classList.add("glass");
       } else {
         secGlass.classList.remove("glass");
@@ -60,6 +40,7 @@ export default function Main_page() {
     }
   };
 
+  handleScroll(); // refresh pe bhi apply ho
 
   window.addEventListener("scroll", handleScroll);
   window.addEventListener("resize", handleScroll);
@@ -68,7 +49,9 @@ export default function Main_page() {
     window.removeEventListener("scroll", handleScroll);
     window.removeEventListener("resize", handleScroll);
   };
-}, []);
+}, [menuOpen]);
+
+
 
 
 useEffect(() => {
