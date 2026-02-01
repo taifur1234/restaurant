@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Main-page.css";
+import { Link } from "react-router-dom";
 
 export default function Main_page() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,7 +41,7 @@ useEffect(() => {
     }
   };
 
-  handleScroll(); // refresh pe bhi apply ho
+  handleScroll();
 
   window.addEventListener("scroll", handleScroll);
   window.addEventListener("resize", handleScroll);
@@ -71,10 +72,8 @@ useEffect(() => {
   return (
     <div className="main-page-container">
       <nav className="navbar">
-        {/* NAVBAR */}
         <div className="sec-glass">
         <p className="logo-p"> Flavour Hub</p>
-        {/* HAMBURGER */}
         <div
           className={`hamburger ${menuOpen ? "active" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
@@ -86,33 +85,15 @@ useEffect(() => {
           </div>
         <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
           <li className="logo">Flavour Hub</li>
-          <li className="nav-item">Home</li>
+          <Link to='/'><li className="nav-item">Home</li></Link>
           <li className="nav-item">Main Menu</li>
           <li className="nav-item">About Us</li>
-          <li className="nav-item">Contact Us</li>
+          <Link to='/contact'><li className="nav-item">Contact Us</li></Link>
           <li className="nav-item">Your Food</li>
           <li>
             <button className="book-btn">Book a Table</button>
           </li>
         </ul>
-
-        {/* HERO */}
-        <div className="hero-details">
-          <h1>We Serve</h1>
-
-          <div className="h-detail-flex">
-            <h1>Delicious</h1>
-            <h1>Food</h1>
-          </div>
-
-          <p>
-            At Flavour Hub, we believe great food brings people together.
-            Our restaurant offers rich flavors, fresh ingredients,
-            and a warm, welcoming ambiance for every occasion.
-          </p>
-
-          <button className="book-btn">Book a Table</button>
-        </div>
       </nav>
     </div>
   );

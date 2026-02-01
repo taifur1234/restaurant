@@ -5,7 +5,7 @@
     font-family: 'Poppins', 'Inter', 'Montserrat', sans-serif;
 
 }
-.navbar {
+/* .navbar {
    background: linear-gradient(
       rgba(0,0,0,0.2),
       rgba(0,0,0,0.2)
@@ -19,6 +19,11 @@
 
   padding: 10px 20px;
   height:650px;
+} */
+
+a{
+  color: inherit;
+  text-decoration: none;
 }
 .nav-list {
   position: fixed;
@@ -534,23 +539,6 @@
     font-size: 0.95rem;
   }
 
-  .hero-details {
-    margin-top: 140px;
-    max-width: 720px;
-  }
-
-  .hero-details h1 {
-    font-size: 3rem;
-  }
-
-  .hero-details p {
-    font-size: 1.5rem;
-    width: 70%;
-    line-height: 1.4;
-    padding-top: 10px;
-    text-align: justify;
-  }
-
   
 }
 
@@ -585,23 +573,6 @@
   .book-btn {
     padding: 12px 20px;
     font-size: 0.95rem;
-  }
-
-  .hero-details {
-    margin-top: 140px;
-    max-width: 720px;
-  }
-
-  .hero-details h1 {
-    font-size: 3rem;
-  }
-
-  .hero-details p {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    padding-top: 10px;
-    width: 70%;
-    text-align: justify;
   }
 
   
@@ -639,22 +610,6 @@
     font-size: 0.95rem;
   }
 
-  .hero-details {
-    margin-top: 140px;
-    max-width: 720px;
-  }
-
-  .hero-details h1 {
-    font-size: 3.5rem;
-  }
-
-  .hero-details p {
-    font-size: 1.7rem;
-    line-height: 1.3;
-    padding-top: 10px;
-    text-align: justify;
-  }
-
   
 }
 
@@ -689,22 +644,6 @@
   .book-btn {
     padding: 15px 22px;
     font-size: 0.95rem;
-  }
-
-  .hero-details {
-    margin-top: 140px;
-    max-width: 720px;
-  }
-
-  .hero-details h1 {
-    font-size: 3.5rem;
-  }
-
-  .hero-details p {
-    font-size: 1.7rem;
-    line-height: 1.3;
-    padding-top: 10px;
-    text-align: justify;
   }
 
   
