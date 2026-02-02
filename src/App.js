@@ -9,6 +9,7 @@ import Cta from './component/Cta';
 import Footer from './component/Footer';
 import Mid from './component/Mid';
 import Contact from './component/Contact';
+import Open from './component/OpenHour';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <>
        <Main/>
        <Contact/>
+       <Open/>
        <Footer/>
         </>
       }/>

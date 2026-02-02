@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', 'Inter', 'Montserrat', sans-serif;
 }
 .contact-top {
    background: linear-gradient(
@@ -40,13 +41,187 @@
     text-align: center;
     margin-top: 10px;
 }
+.c-back span:first-child:hover{
+    color: #F9CE75;
+    transition: 0.4s;
+
+}
+
+
+
+
+
+
+
+.contact-info {
+  padding: 100px 10px 100px 10px;
+  background: linear-gradient(180deg, #ffffff, #f4f6f8);
+  text-align: center;
+}
+
+.contact-info h2 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 60px;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.info-card {
+    border:  1px solid rgba(192, 192, 192, 0.283);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 35px 28px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  transition: 0.4s ease;
+}
+
+.info-card:hover {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.info-card i {
+  font-size: 30px;
+  color: #E55F60;
+  margin-bottom: 18px;
+}
+
+.info-card h4 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.info-card p {
+  font-size: 15px;
+  color: #555;
+}
+
+.contact-bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 50px;
+  margin-top: 80px;
+  max-width: 1100px;
+  margin-inline: auto;
+  align-items: center;
+}
+
+.map iframe {
+  width: 100%;
+  height: 450px;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #E55F60;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #E55F60, #e55f5fcc);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  box-shadow: 0 12px 30px #e55f5f48;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366, #1ebe5b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #fff;
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.45);
+  transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.08);
+}
+
+
 
 
 @media screen and (min-width:320px) and (max-width:480px) {
 
   .contact-top{
-    padding: 130px 0px 0px 30px;
+    padding: 130px 0px 0px 0px;
     height: 500px;
+}
+.c-first{
+  font-size: 1.5rem;
+}
+.contact-info h2{
+  margin-bottom: 30px;
+}
+.map iframe{
+  height: 70vw;
+}
+.map{
+  width: 95vw;
+}
+.contact-form{
+  padding: 40px 0px 40px 0px;
+  width: 95vw;
+}
+.contact-form input,
+.contact-form textarea{
+  width: 90%;
+}
+.contact-form button{
+  width: 70%;
 }
     
 }
@@ -54,16 +229,47 @@
 
    
   .contact-top{
-    padding: 130px 0px 0px 30px;
+    padding: 130px 0px 0px 0px;
     height: 500px;
    }
+   .c-first{
+  font-size: 1.7rem;
+}
+.contact-info h2{
+  margin-bottom: 40px;
+}
+
+.map iframe{
+  height: 50vw;
+}
+.map{
+  width: 96vw;
+}
+
 
 }
 @media screen and (min-width:601px) and (max-width:768px) {
 
   .contact-top{
-    padding: 140px 0px 0px 30px;
+    padding: 140px 0px 0px 0px;
     height: 500px;
+}
+.c-first{
+  font-size: 1.8rem;
+}
+.contact-info h2{
+  margin-bottom: 40px;
+}
+.map iframe{
+  height: 40vw;
+}
+.map{
+  width: 97vw;
+}
+.contact-bottom{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 
@@ -71,8 +277,8 @@
 }
 @media screen and (min-width:1024px) and (max-width:1280px) {
 
-   
   .contact-top{
+    height: 600px;
     padding: 180px 0px 0px 30px;
 }
     

@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+      font-family: 'Poppins', 'Inter', 'Montserrat', sans-serif;
+}
+.opening-hours {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #ffffff, #f3f5f8);
+}
+
+.hours-wrapper {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  gap: 90px;
+  align-items: center;
+}
+
+.hours-image {
+  overflow: hidden;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+.hours-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.hours-image img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+.hours-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.hours-heading {
+  max-width: 420px;
+}
+
+.hours-heading h2 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hours-heading p {
+  font-size: 17px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.hours-card {
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 50px;
+  border-radius: 32px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+}
+
+.day {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 18px 0;
+}
+
+.day span:last-child {
+  font-weight: 600;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+}
+
+@media (min-width:320px) and (max-width:480px){
+    .opening-hours{
+        padding: 40px 20px;
+    }
+    .hours-content{
+        gap: 10px;
+    }
+    .hours-image{
+        display: none;
+    }
+    .hours-heading h2{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .hours-heading p{
+        display: none;
+    }
+    .hours-card{
+        padding: 30px 50px 30px 50px;
+    }
+    .day span{
+        font-size: 0.8rem;
+    }
+}
+@media (min-width:481px) and (max-width:600px){
+    .opening-hours{
+        padding: 40px 20px;
+    }
+    .hours-content{
+        gap: 10px;
+    }
+    .hours-image{
+        display: none;
+    }
+    .hours-heading h2{
+        font-size: 1.7rem;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 15px;
+    }
+    .hours-heading p{
+        display: none;
+    }
+    .hours-card{
+        margin-left: 10px;
+        padding: 20px 50px 30px 50px;
+    }
+    .day span{
+        font-size: 0.8rem;
+    }
+}
+@media (min-width:601px) and (max-width:768px){
+    .opening-hours{
+        padding: 40px 20px;
+    }
+    .hours-content{
+        gap: 10px;
+    }
+    .hours-image{
+        display: none;
+    }
+    .hours-heading h2{
+        font-size: 1.7rem;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 15px;
+    }
+    .hours-heading p{
+        display: none;
+    }
+    .hours-card{
+        display: block;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .day span{
+        font-size: 0.8rem;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .hours-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .hours-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hours-heading {
+    margin-left: 0;
+    max-width: 600px;
+  }
+  .hours-card{
+    width: 450px;
+    max-width: 1000px;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .hours-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .hours-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hours-heading {
+    margin-left: 0;
+    max-width: 600px;
+  }
+  .hours-card{
+    width: 550px;
+    max-width: 1500px;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1600px) {
+  .hours-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .hours-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hours-heading {
+    margin-left: 0;
+    max-width: 600px;
+  }
+  .hours-card{
+    width: 600px;
+    max-width: 1500px;
+  }
+}
+@media (min-width: 1601px) and (max-width: 1920px) {
+  .hours-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .hours-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hours-heading {
+    margin-left: 0;
+    max-width: 600px;
+  }
+  .hours-card{
+    width: 650px;
+    max-width: 1500px;
+  }
+}
+
+
