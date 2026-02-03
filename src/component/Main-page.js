@@ -87,7 +87,7 @@ useEffect(() => {
           <li className="logo">Flavour Hub</li>
           <Link to='/'><li className="nav-item">Home</li></Link>
           <li className="nav-item">Main Menu</li>
-          <li className="nav-item">About Us</li>
+          <Link to='/about'><li className="nav-item">About Us</li></Link>
           <Link to='/contact'><li className="nav-item">Contact Us</li></Link>
           <li className="nav-item">Your Food</li>
           <li>
@@ -95,6 +95,14 @@ useEffect(() => {
           </li>
         </ul>
       </nav>
+      <a
+        href="https://wa.me/919893274291"
+        className="whatsapp-btn"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <i className="fa-brands fa-whatsapp"></i>
+      </a>
     </div>
   );
 }

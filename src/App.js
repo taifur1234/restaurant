@@ -10,6 +10,7 @@ import Footer from './component/Footer';
 import Mid from './component/Mid';
 import Contact from './component/Contact';
 import Open from './component/OpenHour';
+import About from './component/About';
 
 
 function App() {
@@ -38,6 +39,16 @@ function App() {
        <Main/>
        <Contact/>
        <Open/>
+       <Footer/>
+        </>
+      }/>
+
+       <Route 
+      path='/about'
+      element={
+        <>
+       <Main/>
+       <About/>
        <Footer/>
         </>
       }/>
