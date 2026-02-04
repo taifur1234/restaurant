@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 
-/* SECTION */
+
 .chefs-section {
   padding: 90px 8%;
   background: #0f0f0f;
   color: #ffffff;
 }
 
-/* HEADING */
+
 .chefs-heading {
   text-align: center;
   margin-bottom: 60px;
@@ -28,14 +28,14 @@
   color: #aaa;
 }
 
-/* GRID */
+
 .chefs-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 35px;
 }
 
-/* CARD */
+
 .chef-card {
   background: #161616;
   padding: 35px 25px;
@@ -44,6 +44,7 @@
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.6s ease;
+  cursor: pointer;
 }
 
 .chef-card.show {

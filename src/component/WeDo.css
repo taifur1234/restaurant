@@ -31,7 +31,6 @@
   border-radius: 25px;
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
   transition: all 0.35s ease;
-  cursor: pointer;
 }
 
 .wedo-card:hover {
