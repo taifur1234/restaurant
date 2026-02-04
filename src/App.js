@@ -11,6 +11,7 @@ import Mid from './component/Mid';
 import Contact from './component/Contact';
 import Open from './component/OpenHour';
 import About from './component/About';
+import WeDo from './component/WeDo';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         <>
        <Main/>
        <About/>
+       <WeDo/>
        <Footer/>
         </>
       }/>
