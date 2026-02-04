@@ -54,6 +54,9 @@
         font-size: 1.3rem;
          margin: 35vh auto auto auto;
     }
+    .about-top{
+        height: 70vh;
+    }
     .a-back{
         margin: auto;
     }
