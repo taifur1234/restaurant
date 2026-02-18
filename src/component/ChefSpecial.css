@@ -58,11 +58,6 @@
   margin-bottom: 10px;
 }
 
-.chefss-info span {
-  font-weight: bold;
-  font-size: 18px;
-}
-
 .specialss-badge {
   position: absolute;
   top: 15px;
@@ -80,7 +75,7 @@
         font-size: 1.9rem;
     }
     .chefss-section{
-        padding: 80px 5.5%;
+        padding: 80px 5%;
     }
 }
 
