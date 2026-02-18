@@ -15,7 +15,7 @@ export default function ChefSpecial() {
   return (
     <section className="chefss-section">
       <div className="chefss-header">
-        <h2>Chef's Special</h2>
+        <h2>Chef's Suggestions</h2>
         <div className="goldss-line"></div>
       </div>
 
