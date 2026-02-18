@@ -54,6 +54,9 @@ export default function Menu() {
                     <div className="menu-content">
                      <h4>{item.name}</h4>
                      <p>{item.desc}</p>
+                      <button className="add-btn">
+                       Add to Cart
+                      </button>
                     </div>
                     <div className="menu-price">
                      <span className="price-line"></span>

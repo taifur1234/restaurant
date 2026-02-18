@@ -85,14 +85,16 @@ useEffect(() => {
           </div>
         <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
           <li className="logo">Flavour Hub</li>
-          <Link to='/'><li className="nav-item">Home</li></Link>
-          <Link to='/menu'><li className="nav-item">Main Menu</li></Link>
-          <Link to='/about'><li className="nav-item">About Us</li></Link>
-          <Link to='/contact'><li className="nav-item">Contact Us</li></Link>
-          <li className="nav-item">Your Food</li>
+          <Link onClick={() => setMenuOpen(false)} to='/'><li className="nav-item">Home</li></Link>
+          <Link onClick={() => setMenuOpen(false)} to='/menu'><li className="nav-item">Main Menu</li></Link>
+          <Link onClick={() => setMenuOpen(false)} to='/about'><li className="nav-item">About Us</li></Link>
+          <Link onClick={() => setMenuOpen(false)} to='/contact'><li className="nav-item">Contact Us</li></Link>
+          <Link onClick={() => setMenuOpen(false)} ><li className="nav-item">Your Food</li></Link>
+          <Link onClick={() => setMenuOpen(false)} >
           <li>
             <button className="book-btn">Book a Table</button>
           </li>
+          </Link>
         </ul>
       </nav>
     </div>
