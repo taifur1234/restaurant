@@ -14,6 +14,7 @@ import About from './component/About';
 import WeDo from './component/WeDo';
 import Chef from './component/Chef';
 import Menu from './component/Menu';
+import ChefSpecial from './component/ChefSpecial';
 
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
         <>
        <Main/>
        <Menu/>
+       <ChefSpecial/>
        <Footer/>
         </>
       }/>

@@ -6,16 +6,20 @@ export default function Menu() {
 
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const menuItems = [
-    { id: 1, category: "Starters", name: "Golden Crispy Prawns", desc: "Crispy prawns with garlic dip.", price: "₹499", img: "g-prawns.jpg" },
-    { id: 2, category: "Starters", name: "Stuffed Mushrooms", desc: "Cheese stuffed baked mushrooms.", price: "₹349", img: "s-mush.jpg" },
-    { id: 3, category: "Main Course", name: "Royal Butter Chicken", desc: "Creamy rich tomato gravy.", price: "₹599", img: "r-butter.jpg" },
-    { id: 4, category: "Main Course", name: "Paneer Lababdar", desc: "Premium North Indian curry.", price: "₹449", img: "p-labab.jpg" },
-    { id: 5, category: "Desserts", name: "Chocolate Lava Cake", desc: "Warm molten chocolate center.", price: "₹299", img: "c-lava.jpg" },
-    { id: 6, category: "Desserts", name: "Royal Rasmalai", desc: "Soft dumplings in sweet milk.", price: "₹249", img: "r-rasmalai.jpg" }
-  ];
+ const menuItems = [
+    {id:1,category:"Starters",name:"Golden Crispy Prawns",desc:"Crispy prawns with garlic dip.",price:"₹499",img:"g-prawns.jpg",},
+    {id:2,category:"Starters",name:"Stuffed Mushrooms",desc:"Cheese stuffed baked mushrooms.",price:"₹349",img:"s-mush.jpg"},
+    {id:3,category:"Main Course",name:"Royal Butter Chicken",desc:"Creamy rich tomato gravy.",price:"₹599",img:"r-butter.jpg"},
+    {id:4,category:"Main Course",name:"Paneer Lababdar",desc:"Premium North Indian curry.",price:"₹449",img:"p-labab.jpg"},
+    {id:5,category:"Desserts",name:"Chocolate Lava Cake",desc:"Warm molten chocolate center.",price:"₹299",img:"c-lava.jpg"},
+    {id:6,category:"Desserts",name:"Royal Rasmalai",desc:"Soft dumplings in sweet milk.",price:"₹249",img:"r-rasmalai.jpg"},
+    {id:7,category:"Beverages",name:"Masala Chai",desc:"Traditional Indian tea brewed with aromatic spices.",price:"₹120",img:"m-chai.jpg"},
+    {id:8,category:"Beverages",name:"Mango Lassi",desc:"Refreshing yogurt drink blended with fresh mango pulp.",price:"₹180",img:"m-lassi.jpg"},
+    {id:9,category:"Beverages",name:"Cold Coffee",desc:"Chilled creamy coffee topped with whipped foam.",price:"₹220",img:"cc-coffee.jpeg"},
+    {id:10,category:"Beverages",name:"Fresh Lime Soda",desc:"Sweet & salted lime soda for a refreshing taste.",price:"₹150",img:"ff-lime.jpg"}];
 
-  const categories = ["All", "Starters", "Main Course", "Desserts"];
+
+const categories = ["All", "Starters", "Main Course", "Desserts", "Beverages"];
 
   const filteredItems =
     activeCategory === "All"
