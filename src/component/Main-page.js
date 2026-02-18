@@ -95,14 +95,6 @@ useEffect(() => {
           </li>
         </ul>
       </nav>
-      <a
-        href="https://wa.me/919893274291"
-        className="whatsapp-btn"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <i className="fa-brands fa-whatsapp"></i>
-      </a>
     </div>
   );
 }
