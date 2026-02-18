@@ -86,7 +86,7 @@ useEffect(() => {
         <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
           <li className="logo">Flavour Hub</li>
           <Link to='/'><li className="nav-item">Home</li></Link>
-          <li className="nav-item">Main Menu</li>
+          <Link to='/menu'><li className="nav-item">Main Menu</li></Link>
           <Link to='/about'><li className="nav-item">About Us</li></Link>
           <Link to='/contact'><li className="nav-item">Contact Us</li></Link>
           <li className="nav-item">Your Food</li>

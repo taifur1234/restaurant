@@ -13,6 +13,7 @@ import Open from './component/OpenHour';
 import About from './component/About';
 import WeDo from './component/WeDo';
 import Chef from './component/Chef';
+import Menu from './component/Menu';
 
 
 function App() {
@@ -53,6 +54,16 @@ function App() {
        <About/>
        <WeDo/>
        <Chef/>
+       <Footer/>
+        </>
+      }/>
+
+       <Route 
+      path='/menu'
+      element={
+        <>
+       <Main/>
+       <Menu/>
        <Footer/>
         </>
       }/>

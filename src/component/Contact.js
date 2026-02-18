@@ -1,8 +1,8 @@
-import React from 'react'
 import './Contact.css'
 import { Link } from 'react-router-dom';
 
 export default function Contact() {
+
   return (
     <div>
        <div className="contact-top">
@@ -15,7 +15,6 @@ export default function Contact() {
          <span><i className="fa-solid fa-chevron-right"></i> Contact</span>
         </div>
         </div>
-
 
         <section className="contact-info">
       <h2>Get in Touch</h2>
@@ -38,6 +37,7 @@ export default function Contact() {
           <p>taifurahmad24@gmail.com</p>
         </div>
       </div>
+
       <div className="contact-bottom">
         <div className="map">
           <iframe
@@ -46,6 +46,7 @@ export default function Contact() {
             loading="lazy"
           ></iframe>
         </div>
+
         <form className="contact-form">
           <h3>Send Us a Message</h3>
           <input type="text" placeholder="Your Name" required />
@@ -54,6 +55,8 @@ export default function Contact() {
           <button type="submit">Send Message</button>
         </form>
       </div>
+
+
       <a
         href="https://wa.me/919893274291"
         className="whatsapp-btn"
