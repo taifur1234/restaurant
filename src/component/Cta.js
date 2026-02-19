@@ -1,7 +1,10 @@
-import React from "react";
+import {useState} from "react";
 import "./Cta.css";
+import { Link } from "react-router-dom";
 
 export default function Cta() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  console.log(menuOpen);
   return (
     <section className="cta-section">
       <div className="cta-overlay"></div>
@@ -38,7 +41,9 @@ export default function Cta() {
 
         {/* Buttons */}
         <div className="cta-buttons">
-          <button className="cta-primary">Book a Table</button>
+         <Link onClick={() => setMenuOpen(false)} to='/book'>
+         <button className="cta-primary">Book a Table</button>
+         </Link> 
           <button className="cta-secondary">Order Online</button>
         </div>
       </div>

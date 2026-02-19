@@ -1,7 +1,10 @@
-import React from 'react'
+import { useState } from 'react';
 import './Mid.css'
+import { Link } from 'react-router-dom'
 
 export default function Mid() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  console.log(menuOpen);
   return (
     <div>
         <div className="hero-details">
@@ -17,7 +20,9 @@ export default function Mid() {
             Our restaurant offers rich flavors, fresh ingredients, and an warms and goods, welcoming ambiance for every occasion.
           </p>
 
+         <Link  onClick={() => setMenuOpen(false)} to='/book'>
           <button className="book-btn-mid">Book a Table</button>
+         </Link>
         </div>
     </div>
   )
