@@ -8,7 +8,7 @@ export default function Footer() {
 
         {/* Brand */}
         <div className="footer-col">
-          <h3 className="footer-logo">Foodies Hub</h3>
+          <h3 className="footer-logo">Flavour Hub</h3>
           <p>
             Serving delicious food made with love.  
             Fresh ingredients, expert chefs & unforgettable taste.
@@ -41,7 +41,7 @@ export default function Footer() {
           <h4>Contact Us</h4>
           <p>📍 Khargone, MP</p>
           <p>📞 +91 98765 43210</p>
-          <p>✉️ support@foodieshub.com</p>
+          <p>✉️ support@flavourhub.com</p>
 
           <div className="socials">
             <span><i class="fa-brands fa-instagram"></i></span>
@@ -55,7 +55,7 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="footer-bottom">
-        © {new Date().getFullYear()} Foodies Hub. All Rights Reserved.
+        © {new Date().getFullYear()} Flavour Hub. All Rights Reserved.
       </div>
     </footer>
   );

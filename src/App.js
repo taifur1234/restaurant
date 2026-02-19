@@ -15,6 +15,7 @@ import WeDo from './component/WeDo';
 import Chef from './component/Chef';
 import Menu from './component/Menu';
 import ChefSpecial from './component/ChefSpecial';
+import RestaurantBookTable from './component/RestaurantBookTable';
 
 
 function App() {
@@ -66,6 +67,16 @@ function App() {
        <Main/>
        <Menu/>
        <ChefSpecial/>
+       <Footer/>
+        </>
+      }/>
+
+       <Route 
+      path='/book'
+      element={
+        <>
+       <Main/>
+       <RestaurantBookTable/>
        <Footer/>
         </>
       }/>

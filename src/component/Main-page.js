@@ -90,8 +90,8 @@ useEffect(() => {
           <Link onClick={() => setMenuOpen(false)} to='/about'><li className="nav-item">About Us</li></Link>
           <Link onClick={() => setMenuOpen(false)} to='/contact'><li className="nav-item">Contact Us</li></Link>
           <Link onClick={() => setMenuOpen(false)} ><li className="nav-item">Your Food</li></Link>
-          <Link onClick={() => setMenuOpen(false)} >
-          <li>
+          <Link onClick={() => setMenuOpen(false)} to='/book' >
+           <li>
             <button className="book-btn">Book a Table</button>
           </li>
           </Link>

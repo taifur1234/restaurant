@@ -18,7 +18,7 @@ const reviews = [
   },
   {
     id: 3,
-    name: "Rahul Khan",
+    name: "Rahul Verma",
     rating: 5,
     comment:
       "Best restaurant in town. Highly recommended 👍",
