@@ -34,7 +34,7 @@ const chefsData = [
 
 const Chef = () => {
 
-  // scroll animation
+  
   useEffect(() => {
     const cards = document.querySelectorAll(".chef-card");
     const observer = new IntersectionObserver(
