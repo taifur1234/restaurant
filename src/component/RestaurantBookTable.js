@@ -39,7 +39,7 @@ export default function Step1Booking() {
       setBookings(JSON.parse(saved));
     }
   }, []);
-  
+
 
   /* ---------- SAVE TO LOCALSTORAGE ---------- */
   useEffect(() => {
@@ -52,21 +52,24 @@ export default function Step1Booking() {
     return start1 < end2 && end1 > start2;
   };
 
-  const isTableAvailable = (table, start, end) => {
+const isTableAvailable = (table, start, end) => {
 
-    return !bookings.some((booking) => {
+  if (!date) return true;
 
-      if (booking.table !== table) return false;
-      if (booking.date !== date) return false;
+  return !bookings.some((booking) => {
 
-      const newStart = toDate(start);
-      const newEnd = toDate(end);
-      const bookedStart = toDate(booking.start);
-      const bookedEnd = toDate(booking.end);
+    if (booking.table !== table) return false;
+    if (booking.date !== date) return false;
 
-      return isOverlapping(newStart, newEnd, bookedStart, bookedEnd);
-    });
-  };
+    return isOverlapping(
+      toDate(start),
+      toDate(end),
+      toDate(booking.start),
+      toDate(booking.end)
+    );
+  });
+};
+
 
   const isStartDisabled = (time) => {
 
@@ -164,7 +167,7 @@ export default function Step1Booking() {
       return;
     }
 
-    if (!selectedTime || !selectedEndTime) {
+    if (!date || !selectedTable || !selectedTime || !selectedEndTime) {
       alert("Please select start and end time");
       return;
     }
