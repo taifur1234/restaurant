@@ -1,181 +1,92 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import "./RestaurantBookTable.css";
 
-export default function RestaurantBookTable() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    guests: "",
-    date: "",
-    time: "",
-    message: ""
-  });
+export default function Step1Booking() {
+  const [date, setDate] = useState("");
+  const [guests, setGuests] = useState("2");
+  const [type, setType] = useState("Lunch");
+  const [loading, setLoading] = useState(false);
 
-  const [showPopup, setShowPopup] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const validateDateTime = () => {
-    const now = new Date();
-    const selected = new Date(formData.date + "T" + formData.time);
-
-    if (!formData.date || !formData.time) {
-      return "Please select date and time";
-    }
-
-    if (selected < now) {
-      return "Past date/time not allowed";
-    }
-
-    return "";
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const validationError = validateDateTime();
-    if (validationError) {
-      setError(validationError);
+  const handleCheck = () => {
+    if (!date) {
+      alert("Please select a date");
       return;
     }
 
-    setError("");
-    setShowPopup(true);
+    setLoading(true);
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      guests: "",
-      date: "",
-      time: "",
-      message: ""
-    });
+    setTimeout(() => {
+      setLoading(false);
+      alert("Table is Availabel.");
+    }, 2500);
   };
 
   return (
-    <div className="rbt-wrapper">
+    <div className="rbt1-wrapper">
 
-      <motion.div
-        className="rbt-container"
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h2 className="rbt-title">Book Your Table</h2>
+      <div className="rbt1-header">
+        <h1>BOOK A TABLE</h1>
+        <p>Enjoy a family friendly bite to eat</p>
 
-        <form className="rbt-form" onSubmit={handleSubmit}>
+        <div className="rbt1-steps">
+          <span className="active"></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
 
-          <div className="rbt-row">
-            <input className="rbt-input"
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <input className="rbt-input"
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
+      <div className="rbt1-form">
+        <div className="rbt1-field">
+          <label>OCCASION</label>
+          <select>
+            <option>Casual Dining</option>
+            <option>Birthday</option>
+            <option>Anniversary</option>
+          </select>
+        </div>
 
-          <div className="rbt-row">
-            <input className="rbt-input"
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
-            <select
-              className="rbt-input"
-              name="guests"
-              value={formData.guests}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Guests</option>
-              <option>1 Person</option>
-              <option>2 People</option>
-              <option>3 People</option>
-              <option>4+ People</option>
-            </select>
-          </div>
-
-          <div className="rbt-row">
-            <input
-              className="rbt-input"
-              type="date"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
-              required
-            />
-            <input
-              className="rbt-input"
-              type="time"
-              name="time"
-              value={formData.time}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <textarea
-            className="rbt-textarea"
-            name="message"
-            placeholder="Special Request"
-            value={formData.message}
-            onChange={handleChange}
+        <div className="rbt1-field">
+          <label>DATE</label>
+          <input
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
           />
+        </div>
 
-          {error && <p className="rbt-error">{error}</p>}
-
-          <button className="rbt-button" type="submit">
-            Book Now
-          </button>
-        </form>
-      </motion.div>
-
-      <AnimatePresence>
-        {showPopup && (
-          <motion.div
-            className="rbt-popup-overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+        <div className="rbt1-field">
+          <label>NO' GUESTS</label>
+          <select
+            value={guests}
+            onChange={(e) => setGuests(e.target.value)}
           >
-            <motion.div
-              className="rbt-popup-box"
-              initial={{ scale: 0.6 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.6 }}
-              transition={{ duration: 0.3 }}
-            >
-              <h3>🎉 Booking Confirmed!</h3>
-              <p>Your table has been successfully reserved.</p>
-              <button
-                className="rbt-popup-btn"
-                onClick={() => setShowPopup(false)}
-              >
-                Close
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            {[1,2,3,4,5,6,7,8].map(num => (
+              <option key={num}>{num}</option>
+            ))}
+          </select>
+        </div>
+
+        <div className="rbt1-field">
+          <label>BOOKING TYPE</label>
+          <select
+            value={type}
+            onChange={(e) => setType(e.target.value)}
+          >
+            <option>Lunch</option>
+            <option>Dinner</option>
+          </select>
+        </div>
+
+      </div>
+
+      <button className="rbt1-btn" onClick={handleCheck}>
+        CHECK AVAILABILITY
+      </button>
+      {loading && (
+        <div className="rbt1-loader-overlay">
+          <div className="rbt1-loader"></div>
+        </div>
+      )}
 
     </div>
   );
