@@ -1,3 +1,5 @@
+/* Step one css */
+
 .rbt1-wrapper {
   min-height: 100vh;
   background: #d9d3cf;
@@ -118,21 +120,391 @@
   }
 }
 
-@media (min-width:320px) and (max-width:480px) {
-    .rbt1-header h1{
-        font-size: 1.4rem !important;
-    }
-    .rbt1-header p{
-        font-size: 1rem !important;
-    }
-}
 
 @media (max-width: 768px) {
-  .rbt1-form {
+    .rbt1-form {
     grid-template-columns: 1fr;
   }
 
   .rbt1-header h1 {
     font-size: 40px;
+}
+}
+
+
+
+/* ============================= */
+/* STEP 2 DESIGN (TIME SLOT)    */
+/* ============================= */
+
+.rbt2-time-section {
+  margin-top: 40px;
+  text-align: center;
+  animation: rbt2-fadeIn 0.5s ease-in-out;
+}
+
+@keyframes rbt2-fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rbt2-subtitle {
+  letter-spacing: 4px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.rbt2-info {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.rbt2-legend {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.rbt2-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.rbt2-selected-dot { background: gold; }
+.rbt2-available-dot { background: #e05656; }
+.rbt2-enquire-dot { background: #555; }
+.rbt2-unavailable-dot { background: #bdb5ae; }
+
+
+
+/* Start & End Title */
+
+.rbt2-start {
+  margin: 30px 0 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.rbt2-time-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 650px;
+  margin: auto;
+}
+
+.rbt2-time-btn {
+  padding: 18px;
+  border-radius: 50px;
+  border: none;
+  background: #e05656;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rbt2-time-btn:hover {
+  background: #c74444;
+  transform: translateY(-2px);
+}
+
+.rbt2-time-btn-active {
+  background: gold;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* End Section Animation */
+
+.rbt2-end-section {
+  margin-top: 60px;
+  animation: rbt2-slideUp 0.4s ease-in-out;
+}
+
+@keyframes rbt2-slideUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Reserve Button */
+
+.rbt2-reserve-btn {
+  margin-top: 40px;
+  padding: 18px 50px;
+  border-radius: 50px;
+  border: none;
+  background: #e05656;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rbt2-reserve-btn:hover {
+  background: #c74444;
+}
+.rbt2-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* Back Button */
+
+.rbt2-back {
+  margin-top: 40px;
+}
+
+.rbt2-back button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .rbt2-time-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+
+
+
+
+
+
+/* ========================== */
+/* STEP 3 COMPLETE BOOKING   */
+/* ========================== */
+
+.rbt3-wrapper {
+  margin-top: 40px;
+  text-align: center;
+  animation: rbt3-fade 0.4s ease-in-out;
+}
+
+@keyframes rbt3-fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rbt3-subtitle {
+  letter-spacing: 4px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.rbt3-summary {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+.rbt3-form {
+  max-width: 800px;
+  margin: auto;
+}
+
+.rbt3-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.rbt3-row input {
+  flex: 1;
+  padding: 15px;
+  border-radius: 30px;
+  border: 1px solid #d8cfc7;
+  font-size: 14px;
+  outline: none;
+}
+
+.rbt3-form textarea {
+  width: 100%;
+  min-height: 140px;
+  outline: none;
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid #d8cfc7;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+.rbt3-complete-btn {
+  padding: 18px 50px;
+  border-radius: 50px;
+  border: none;
+  background: #e05656;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rbt3-complete-btn:hover {
+  background: #c74444;
+}
+
+.rbt3-back {
+  margin-top: 30px;
+}
+
+.rbt3-back button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .rbt3-row {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* FINAL CONFIRMATION PAGE */
+/* ============================= */
+
+.rbt4-wrapper {
+  text-align: center;
+  padding: 40px 20px;
+  background: transparent;
+  min-height: 100vh;
+}
+
+.rbt4-title {
+  font-size: 70px;
+  letter-spacing: 10px;
+  color: #d9534f;
+  margin-bottom: 25px;
+}
+
+.rbt4-thankyou {
+  letter-spacing: 4px;
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.rbt4-box {
+  border: 2px solid #d9534f;
+  padding: 50px 30px;
+  max-width: 650px;
+  margin: 0 auto 50px;
+  background: transparent;
+}
+
+.rbt4-res-title {
+  text-decoration: underline;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.rbt4-box p {
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+.rbt4-menu-btn {
+  padding: 15px 45px;
+  border-radius: 50px;
+  border: 2px solid #d9534f;
+  background: transparent;
+  color: #d9534f;
+  letter-spacing: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rbt4-menu-btn:hover {
+  background: #d9534f;
+  color: #fff;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .rbt4-title {
+    font-size: 42px;
+    letter-spacing: 6px;
+  }
+
+  .rbt4-box {
+    padding: 30px 20px;
+  }
+
+  .rbt4-box p {
+    font-size: 16px;
+  }
+
+  .rbt4-menu-btn {
+    width: 80%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:320px) and (max-width:480px) {
+    .rbt1-header h1{
+        font-size: 1.4rem !important;
+    }
+    .rbt2-reserve-btn{
+        font-size: 0.8rem;
+    }
+    .rbt3-complete-btn {
+        font-size: 0.8rem;
+    }
+    .rbt4-title{
+        font-size: 1.5rem;
+    }
+    .rbt4-thankyou{
+        font-size: 0.8rem;
+    }
+    .rbt1-header p{
+        font-size: 1rem !important;
+    }
+    .rbt1-btn{
+        font-size: 0.9rem;
+    }
 }
