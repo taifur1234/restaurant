@@ -1,3 +1,8 @@
+
+
+
+
+
 /* Step one css */
 
 .rbt1-wrapper {
@@ -133,9 +138,14 @@
 
 
 
-/* ============================= */
+
+
+
+
+
+
+
 /* STEP 2 DESIGN (TIME SLOT)    */
-/* ============================= */
 
 .rbt2-time-section {
   margin-top: 40px;
@@ -185,6 +195,12 @@
 
 
 
+
+
+
+
+
+
 /* Start & End Title */
 
 .rbt2-start {
@@ -230,14 +246,10 @@
   margin-top: 60px;
   animation: rbt2-slideUp 0.4s ease-in-out;
 }
-
 @keyframes rbt2-slideUp {
   from { opacity: 0; transform: translateY(25px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-/* Reserve Button */
-
 .rbt2-reserve-btn {
   margin-top: 40px;
   padding: 18px 50px;
@@ -250,7 +262,6 @@
   cursor: pointer;
   transition: 0.3s;
 }
-
 .rbt2-reserve-btn:hover {
   background: #c74444;
 }
@@ -258,14 +269,9 @@
   opacity: 0.4;
   cursor: not-allowed;
 }
-
-
-/* Back Button */
-
 .rbt2-back {
   margin-top: 40px;
 }
-
 .rbt2-back button {
   background: none;
   border: none;
@@ -274,9 +280,6 @@
   cursor: pointer;
   color: #333;
 }
-
-/* Responsive */
-
 @media (max-width: 768px) {
   .rbt2-time-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -289,9 +292,9 @@
 
 
 
-/* ========================== */
+
+
 /* STEP 3 COMPLETE BOOKING   */
-/* ========================== */
 
 .rbt3-wrapper {
   margin-top: 40px;
@@ -374,8 +377,6 @@
   cursor: pointer;
 }
 
-/* Responsive */
-
 @media (max-width: 768px) {
   .rbt3-row {
     flex-direction: column;
@@ -390,15 +391,15 @@
 
 
 
-/* ============================= */
+
+
+
 /* FINAL CONFIRMATION PAGE */
-/* ============================= */
 
 .rbt4-wrapper {
   text-align: center;
-  padding: 40px 20px;
+  padding: 0px 20px;
   background: transparent;
-  min-height: 100vh;
 }
 
 .rbt4-title {
@@ -451,10 +452,6 @@
   color: #fff;
 }
 
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-
 @media (max-width: 768px) {
 
   .rbt4-title {
@@ -485,6 +482,8 @@
 
 
 
+
+
 @media (min-width:320px) and (max-width:480px) {
     .rbt1-header h1{
         font-size: 1.4rem !important;
@@ -496,7 +495,7 @@
         font-size: 0.8rem;
     }
     .rbt4-title{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     .rbt4-thankyou{
         font-size: 0.8rem;

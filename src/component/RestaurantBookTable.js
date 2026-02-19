@@ -32,12 +32,14 @@ export default function Step1Booking() {
   const tables = ["T1","T2","T3","T4","T5","T6"];
 
   /* ---------- LOAD FROM LOCALSTORAGE ---------- */
+
   useEffect(() => {
     const saved = localStorage.getItem("rbt_bookings");
     if (saved) {
       setBookings(JSON.parse(saved));
     }
   }, []);
+  
 
   /* ---------- SAVE TO LOCALSTORAGE ---------- */
   useEffect(() => {
