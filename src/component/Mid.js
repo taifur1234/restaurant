@@ -14,8 +14,7 @@ export default function Mid() {
 
           <p>
             At Flavour Hub, we believe great food brings people together.
-            Our restaurant offers rich flavors, fresh ingredients,
-            and a warm, welcoming ambiance for every occasion.
+            Our restaurant offers rich flavors, fresh ingredients, and an warms and goods, welcoming ambiance for every occasion.
           </p>
 
           <button className="book-btn-mid">Book a Table</button>
