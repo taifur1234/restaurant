@@ -27,55 +27,69 @@ const decreaseQty = (index) => {
 
   return (
     <div className="cart-wrapper">
-      <h2>Your <span>Cart</span></h2>
 
-      <div className="cart-items">
-        {cart.map((item, index) => (
-          <div className="cart-card" key={index}>
-
-  <div className="top-row">
-    <img src={item.img} alt={item.name} />
-    <div className="cart-details">
-      <h4>{item.name}</h4>
-      <p>{item.desc}</p>
-    </div>
-  </div>
-
-  <div className="price-row">
-    <div className="cart-price">
-      ₹{item.price}
-    </div>
-
-    <div className="qty-remove">
-      <div className="qty-box">
-        <button onClick={() => decreaseQty(index)}>-</button>
-        <span>{item.qty}</span>
-        <button onClick={() => increaseQty(index)}>+</button>
-      </div>
-
-      <button 
-        className="modern-remove"
-        onClick={() => removeItem(index)}
-      >
-        Remove
-      </button>
-    </div>
-  </div>
-
-</div>
-        ))}
-      </div>
-
-      <div className="cart-bottom">
-        <div className="total-box">
-          <h4>Cart Total</h4>
-          <p>Subtotal <span>₹{subtotal}</span></p>
-          <p>Total <span>₹{subtotal}</span></p>
-          <button className="checkout-btn">
-            Proceed To Checkout →
-          </button>
+      {/* ✅ CONDITION ADDED HERE */}
+      {cart.length === 0 ? (
+          
+          <div className="empty-cart">
+          <h3>Your Cart is Empty</h3>
         </div>
-      </div>
+
+      ) : (
+
+        <>
+          <div className="cart-items">
+<h2>Your <span>Cart</span></h2>
+            {cart.map((item, index) => (
+              <div className="cart-card" key={index}>
+
+                <div className="top-row">
+                  <img src={item.img} alt={item.name} />
+                  <div className="cart-details">
+                    <h4>{item.name}</h4>
+                    <p>{item.desc}</p>
+                  </div>
+                </div>
+
+                <div className="price-row">
+                  <div className="cart-price">
+                    ₹{item.price}
+                  </div>
+
+                  <div className="qty-remove">
+                    <div className="qty-box">
+                      <button onClick={() => decreaseQty(index)}>-</button>
+                      <span>{item.qty}</span>
+                      <button onClick={() => increaseQty(index)}>+</button>
+                    </div>
+
+                    <button 
+                      className="modern-remove"
+                      onClick={() => removeItem(index)}
+                    >
+                      Remove
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            ))}
+          </div>
+
+          <div className="cart-bottom">
+            <div className="total-box">
+              <h4>Cart Total</h4>
+              <p>Subtotal <span>₹{subtotal}</span></p>
+              <p>Total <span>₹{subtotal}</span></p>
+              <button className="checkout-btn">
+                Proceed To Checkout →
+              </button>
+            </div>
+          </div>
+        </>
+
+      )}
+
     </div>
   );
 }
