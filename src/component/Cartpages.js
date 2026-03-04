@@ -27,8 +27,6 @@ const decreaseQty = (index) => {
 
   return (
     <div className="cart-wrapper">
-
-      {/* ✅ CONDITION ADDED HERE */}
       {cart.length === 0 ? (
           
           <div className="empty-cart">
@@ -39,7 +37,7 @@ const decreaseQty = (index) => {
 
         <>
           <div className="cart-items">
-<h2>Your <span>Cart</span></h2>
+            <h2>Your <span>Cart</span></h2>
             {cart.map((item, index) => (
               <div className="cart-card" key={index}>
 
