@@ -200,8 +200,8 @@
 @media screen and (min-width:320px) and (max-width:480px) {
 
   .contact-top{
-    padding: 130px 0px 0px 0px;
-    height: 500px;
+    padding: 250px 0px 0px 0px;
+    height: 650px;
 }
 .c-first{
   font-size: 1.5rem;
@@ -232,8 +232,8 @@
 
    
   .contact-top{
-    padding: 130px 0px 0px 0px;
-    height: 500px;
+    padding: 230px 0px 0px 0px;
+    height: 700px;
    }
    .c-first{
   font-size: 1.7rem;
@@ -254,8 +254,8 @@
 @media screen and (min-width:601px) and (max-width:768px) {
 
   .contact-top{
-    padding: 140px 0px 0px 0px;
-    height: 500px;
+    padding: 250px 0px 0px 0px;
+    height: 700px;
 }
 .c-first{
   font-size: 1.8rem;

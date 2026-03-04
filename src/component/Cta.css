@@ -109,6 +109,15 @@
   .cta-content h2{
     font-size: 1.2rem;
   }
+  .cta-stats{
+    gap: 20px;
+  }
+  .cta-section{
+    padding: 100px 20px;
+  }
+  .cta-info{
+    gap: 20px;
+  }
 }
 
 @media screen and (min-width:481px) and (max-width:600px) {

@@ -51,11 +51,11 @@
 
 @media (min-width:320px) and (max-width:480px){
     .a-first{
-        font-size: 1.3rem;
-         margin: 25vh auto auto auto;
+        font-size: 1.5rem;
+         margin: 38vh auto auto auto;
     }
     .about-top{
-        height: 70vh;
+        height: 90vh;
     }
     .a-back{
         margin: auto;
@@ -63,8 +63,11 @@
 }
 @media (min-width:481px) and (max-width:600px){
     .a-first{
-        font-size: 1.4rem;
-         margin: 35vh auto auto auto;
+        font-size: 1.6rem;
+         margin: 42vh auto auto auto;
+    }
+    .about-top{
+        height: 100vh;
     }
     .a-back{
         margin: auto;
@@ -74,7 +77,10 @@
 @media (min-width:601px) and (max-width:768px){
     .a-first{
         font-size: 1.6rem;
-         margin: 35vh auto auto auto;
+         margin: 40vh auto auto auto;
+    }
+    .about-top{
+        height: 99vh;
     }
     .a-back{
         margin: auto;

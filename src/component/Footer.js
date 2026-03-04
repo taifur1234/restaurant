@@ -44,10 +44,10 @@ export default function Footer() {
           <p>✉️ support@flavourhub.com</p>
 
           <div className="socials">
-            <span><i class="fa-brands fa-instagram"></i></span>
-            <span><i class="fa-brands fa-whatsapp"></i></span>
-            <span><i class="fa-brands fa-facebook-f"></i></span>
-            <span><i class="fa-brands fa-twitter"></i></span>
+            <span><i className="fa-brands fa-instagram"></i></span>
+            <span><i className="fa-brands fa-whatsapp"></i></span>
+            <span><i className="fa-brands fa-facebook-f"></i></span>
+            <span><i className="fa-brands fa-twitter"></i></span>
           </div>
         </div>
 

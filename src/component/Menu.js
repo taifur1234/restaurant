@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Menu.css'
 import { Link } from 'react-router-dom'
 
-export default function Menu() {
+export default function Menu() { 
 
   const [activeCategory, setActiveCategory] = useState("All");
 

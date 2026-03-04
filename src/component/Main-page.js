@@ -20,80 +20,80 @@ export default function Main_page() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const secGlass = document.querySelector(".sec-glass");
+      const width = window.innerWidth;
 
-
-
-useEffect(() => {
-  const handleScroll = () => {
-    const secGlass = document.querySelector(".sec-glass");
-    const width = window.innerWidth;
-
-    if (!secGlass) return;
-    
-    if (width >= 320 && width <= 768) {
-      if (window.scrollY > 50 && !menuOpen) {
-        secGlass.classList.add("glass");
+      if (!secGlass) return;
+      
+      if (width >= 320 && width <= 768) {
+        if (window.scrollY > 50 && !menuOpen) {
+          secGlass.classList.add("glass");
+        } else {
+          secGlass.classList.remove("glass");
+        }
       } else {
         secGlass.classList.remove("glass");
       }
-    } else {
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const secGlass = document.querySelector(".sec-glass");
+    if (!secGlass) return;
+
+    if (menuOpen && window.scrollY > 50) {
       secGlass.classList.remove("glass");
+    } else if (!menuOpen && window.scrollY > 50){
+      secGlass.classList.add("glass");
     }
-  };
-
-  handleScroll();
-
-  window.addEventListener("scroll", handleScroll);
-  window.addEventListener("resize", handleScroll);
-
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-    window.removeEventListener("resize", handleScroll);
-  };
-}, [menuOpen]);
-
-
-
-
-useEffect(() => {
-  const secGlass = document.querySelector(".sec-glass");
-
-
-  if (menuOpen && window.scrollY > 50) {
-    secGlass.classList.remove("glass");
-  } else if (!menuOpen && window.scrollY > 50){
-    secGlass.classList.add("glass");
-    
-  }
-}, [menuOpen]);
-
-
+  }, [menuOpen]);
 
   return (
     <div className="main-page-container">
       <nav className="navbar">
         <div className="sec-glass">
-        <p className="logo-p"> Flavour Hub</p>
-        <div
-          className={`hamburger ${menuOpen ? "active" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
+          <p className="logo-p"> Flavour Hub</p>
+          <div
+            className={`hamburger ${menuOpen ? "active" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
           >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
+        </div>
+
         <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
           <li className="logo">Flavour Hub</li>
+
           <Link onClick={() => setMenuOpen(false)} to='/'><li className="nav-item">Home</li></Link>
           <Link onClick={() => setMenuOpen(false)} to='/menu'><li className="nav-item">Main Menu</li></Link>
           <Link onClick={() => setMenuOpen(false)} to='/about'><li className="nav-item">About Us</li></Link>
           <Link onClick={() => setMenuOpen(false)} to='/contact'><li className="nav-item">Contact Us</li></Link>
-          <Link onClick={() => setMenuOpen(false)} ><li className="nav-item">Your Food</li></Link>
-          <Link onClick={() => setMenuOpen(false)} to='/book' >
-           <li>
-            <button className="book-btn">Book a Table</button>
-          </li>
+
+          {/* ✅ Fixed */}
+          <Link onClick={() => setMenuOpen(false)} to='/cart'>
+            <li className="nav-item">
+              Your Food
+            </li>
+          </Link>
+
+          <Link onClick={() => setMenuOpen(false)} to='/book'>
+            <li>
+              <button className="book-btn">Book a Table</button>
+            </li>
           </Link>
         </ul>
       </nav>
