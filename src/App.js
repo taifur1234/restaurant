@@ -1,5 +1,7 @@
 import './App.css';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { useState, useEffect } from "react";
+
 import Main from './component/Main-page';
 import Steps from './component/Steps';
 import PopularFood from './component/Popularfood';
@@ -16,12 +18,35 @@ import Chef from './component/Chef';
 import Menu from './component/Menu';
 import ChefSpecial from './component/ChefSpecial';
 import RestaurantBookTable from './component/RestaurantBookTable';
-
+import CartPage from './component/Cartpages';
 
 function App() {
+
+  // ✅ 1. Cart State (localStorage se load hoga)
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  // ✅ 2. Jab bhi cart change ho save ho jaaye
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  const addToCart = (item) => {
+  const cleanPrice = parseFloat(item.price);  // safety
+
+  setCart([...cart, { 
+    ...item, 
+    price: cleanPrice,
+    qty: 1 
+  }]);
+};
+
   return (
     <BrowserRouter>
     <Routes>
+
       <Route 
       path='/'
       element={
@@ -65,7 +90,8 @@ function App() {
       element={
         <>
        <Main/>
-       <Menu/>
+       {/* 👇 Yaha sirf addToCart pass kiya */}
+       <Menu addToCart={addToCart}/>
        <ChefSpecial/>
        <Footer/>
         </>
@@ -81,6 +107,15 @@ function App() {
         </>
       }/>
 
+       <Route 
+      path='/cart'
+      element={
+        <>
+       <Main/>
+       <CartPage cart={cart} setCart={setCart}/>
+       <Footer/>
+        </>
+      }/>
 
     </Routes>
     </BrowserRouter>
