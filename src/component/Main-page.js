@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Main-page.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Main_page() {
   const [menuOpen, setMenuOpen] = useState(false);
+   const location = useLocation();
+  const isCartPage = location.pathname === "/cart";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,9 +77,8 @@ export default function Main_page() {
           </div>
         </div>
 
-        <ul className={`nav-list ${menuOpen ? "open" : ""}`}>
+        <ul className={`nav-list ${menuOpen ? "open" : ""} ${isCartPage ? "nav-light" : "nav-dark"}`}>
           <li className="logo">Flavour Hub</li>
-
           <Link onClick={() => setMenuOpen(false)} to='/'><li className="nav-item">Home</li></Link>
           <Link onClick={() => setMenuOpen(false)} to='/menu'><li className="nav-item">Main Menu</li></Link>
           <Link onClick={() => setMenuOpen(false)} to='/about'><li className="nav-item">About Us</li></Link>
