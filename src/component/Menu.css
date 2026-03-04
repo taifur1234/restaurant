@@ -240,7 +240,7 @@
   .menu-grid {
     grid-template-columns: 1fr;
   }
-
+  
   .menu-grid::before {
     display: none;
   }
@@ -288,11 +288,11 @@
         font-size: 0.8rem;
     }
     .m-first{
-        font-size: 1.3rem;
-         margin: 25vh auto auto auto;
+        font-size: 1.5rem;
+         margin: 37vh auto auto auto;
     }
     .menu-top{
-        height: 70vh;
+        height: 88vh;
     }
     .m-back{
         margin: auto;
@@ -307,8 +307,11 @@
 }
 @media (min-width:481px) and (max-width:600px){
     .m-first{
-        font-size: 1.4rem;
-         margin: 35vh auto auto auto;
+        font-size: 1.6rem;
+         margin: 38vh auto auto auto;
+    }
+    .menu-top{
+      height: 95vh;
     }
     .m-back{
         margin: auto;
@@ -318,7 +321,10 @@
 @media (min-width:601px) and (max-width:768px){
     .m-first{
         font-size: 1.6rem;
-         margin: 35vh auto auto auto;
+         margin: 38vh auto auto auto;
+    }
+    .menu-top{
+      height: 95vh;
     }
     .m-back{
         margin: auto;
