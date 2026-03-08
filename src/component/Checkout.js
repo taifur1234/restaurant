@@ -13,7 +13,6 @@ export default function CheckoutPage({ cart }) {
 
       <div className="checkout-container">
 
-        {/* LEFT SIDE */}
         <div className="checkout-form">
 
           <h3>Delivery Details</h3>
@@ -43,7 +42,6 @@ export default function CheckoutPage({ cart }) {
         </div>
 
 
-        {/* RIGHT SIDE */}
         <div className="order-summary">
 
           <h3>Your Order</h3>
