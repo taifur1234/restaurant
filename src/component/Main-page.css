@@ -201,6 +201,9 @@ a{
   .nav-list.glass{
     background: rgba(0,0,0,0.92);
   }
+  .nav-list.glass li{
+    color: white;
+  }
 
   .nav-list {
     flex-direction: column;
@@ -267,6 +270,10 @@ a{
 
 
 @media screen and (min-width:481px) and (max-width: 600px) {
+
+   .nav-list.glass li{
+    color: white;
+  }
 
    .sec-glass {
   position: fixed;
@@ -388,6 +395,9 @@ a{
 
 @media screen and (min-width:601px) and (max-width: 768px) {
 
+   .nav-list.glass li{
+    color: white;
+  }
 
     .sec-glass {
   position: fixed;
