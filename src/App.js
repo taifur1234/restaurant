@@ -19,6 +19,7 @@ import Menu from './component/Menu';
 import ChefSpecial from './component/ChefSpecial';
 import RestaurantBookTable from './component/RestaurantBookTable';
 import CartPage from './component/Cartpages';
+import Check from './component/Checkout';
 
 function App() {
 
@@ -113,6 +114,16 @@ function App() {
         <>
        <Main/>
        <CartPage cart={cart} setCart={setCart}/>
+       <Footer/>
+        </>
+      }/>
+
+       <Route 
+      path='/checkout'
+      element={
+        <>
+       <Main/>
+       <Check cart={cart}/>
        <Footer/>
         </>
       }/>

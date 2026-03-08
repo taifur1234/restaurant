@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 export default function Main_page() {
   const [menuOpen, setMenuOpen] = useState(false);
    const location = useLocation();
-  const isCartPage = location.pathname === "/cart";
+  const isCartPage = location.pathname === "/cart" || location.pathname === "/checkout";
 
   useEffect(() => {
     const handleScroll = () => {

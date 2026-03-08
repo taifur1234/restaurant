@@ -1,6 +1,10 @@
 import "./Cartpages.css";
+import { useNavigate } from "react-router-dom";
+
 
 export default function CartPage({ cart, setCart }) {
+
+const navigate = useNavigate();
 
  const increaseQty = (index) => {
   const updated = [...cart];
@@ -79,7 +83,7 @@ const decreaseQty = (index) => {
               <h4>Cart Total</h4>
               <p>Subtotal <span>₹{subtotal}</span></p>
               <p>Total <span>₹{subtotal}</span></p>
-              <button className="checkout-btn">
+              <button className="checkout-btn"  onClick={() => navigate("/checkout")}>
                 Proceed To Checkout →
               </button>
             </div>
