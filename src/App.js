@@ -23,19 +23,19 @@ import Check from './component/Checkout';
 
 function App() {
 
-  // ✅ 1. Cart State (localStorage se load hoga)
+
   const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem("cart");
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
-  // ✅ 2. Jab bhi cart change ho save ho jaaye
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = (item) => {
-  const cleanPrice = parseFloat(item.price);  // safety
+  const cleanPrice = parseFloat(item.price);
 
   setCart([...cart, { 
     ...item, 
@@ -52,7 +52,7 @@ function App() {
       path='/'
       element={
         <>
-       <Main/>
+       <Main cart={cart}/>
        <Mid/>
        <Steps/>
        <PopularFood/>
@@ -67,7 +67,7 @@ function App() {
       path='/contact'
       element={
         <>
-       <Main/>
+       <Main cart={cart}/>
        <Contact/>
        <Open/>
        <Footer/>
@@ -78,7 +78,7 @@ function App() {
       path='/about'
       element={
         <>
-       <Main/>
+       <Main cart={cart}/>
        <About/>
        <WeDo/>
        <Chef/>
@@ -90,8 +90,7 @@ function App() {
       path='/menu'
       element={
         <>
-       <Main/>
-       {/* 👇 Yaha sirf addToCart pass kiya */}
+       <Main cart={cart}/>
        <Menu addToCart={addToCart}/>
        <ChefSpecial/>
        <Footer/>
@@ -102,7 +101,7 @@ function App() {
       path='/book'
       element={
         <>
-       <Main/>
+       <Main cart={cart}/>
        <RestaurantBookTable/>
        <Footer/>
         </>
@@ -112,7 +111,7 @@ function App() {
       path='/cart'
       element={
         <>
-       <Main/>
+       <Main cart={cart}/>
        <CartPage cart={cart} setCart={setCart}/>
        <Footer/>
         </>
@@ -122,7 +121,7 @@ function App() {
       path='/checkout'
       element={
         <>
-       <Main/>
+       <Main cart={cart}/>
        <Check cart={cart}/>
        <Footer/>
         </>

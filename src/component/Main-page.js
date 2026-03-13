@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Main-page.css";
 import { Link, useLocation } from "react-router-dom";
 
-export default function Main_page() {
+export default function Main_page({ cart }) {
   const [menuOpen, setMenuOpen] = useState(false);
    const location = useLocation();
   const isCartPage = location.pathname === "/cart" || location.pathname === "/checkout";
@@ -87,7 +87,7 @@ export default function Main_page() {
           {/* ✅ Fixed */}
           <Link onClick={() => setMenuOpen(false)} to='/cart'>
             <li className="nav-item">
-              Your Food
+              Your Food (<span>{cart.length})</span>
             </li>
           </Link>
 
