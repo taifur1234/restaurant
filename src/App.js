@@ -20,6 +20,7 @@ import ChefSpecial from './component/ChefSpecial';
 import RestaurantBookTable from './component/RestaurantBookTable';
 import CartPage from './component/Cartpages';
 import Check from './component/Checkout';
+import Admin from './component/AdminPanel';
 
 function App() {
 
@@ -55,7 +56,7 @@ function App() {
        <Main cart={cart}/>
        <Mid/>
        <Steps/>
-       <PopularFood/>
+       <PopularFood addToCart={addToCart}/>
        <WhyChooseFood/>
        <Cta/>
        <Customer/>
@@ -124,6 +125,14 @@ function App() {
        <Main cart={cart}/>
        <Check cart={cart}/>
        <Footer/>
+        </>
+      }/>
+
+      <Route 
+      path='/admin'
+      element={
+        <>
+         <Admin/>
         </>
       }/>
 
