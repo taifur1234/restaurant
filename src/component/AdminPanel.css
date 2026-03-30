@@ -167,3 +167,124 @@ border-radius:6px;
 cursor:pointer;
 
 }
+
+
+
+
+
+
+/* researve */
+
+
+
+.rp-reservation {
+  padding: 20px;
+}
+
+.rp-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.rp-filter input,
+.rp-filter select {
+  padding: 8px;
+}
+
+/* STATUS COLORS */
+.rp-status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.confirmed { background: green; }
+.pending { background: orange; }
+.cancelled { background: red; }
+
+/* TABLE GRID */
+.rp-table-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.rp-table-box {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.booked {
+  background: #ff4d4d;
+  color: white;
+}
+
+.available {
+  background: #4caf50;
+  color: white;
+}
+
+.rp-table-box span {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+
+
+
+
+/* menu management */
+
+
+.rp-menu-page {
+  padding: 20px;
+}
+
+.rp-delete {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.rp-delete:hover {
+  background: darkred;
+}
+.rp-preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+
+
+
+
+
+/* Table section */
+
+
+.rp-tables {
+  padding: 20px;
+}
+
+.rp-table-box.available { background: #4caf50; }
+.rp-table-box.booked { background: #f44336; }
+.rp-table-box.reserved { background: orange; }
+
+.rp-table-box {
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
